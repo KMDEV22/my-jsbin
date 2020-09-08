@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <style>
+        .tablespace {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: auto;
+            background-color: blanchedalmond;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .tablespace img {
+            background: transparent;
+
+            width: 175px;
+
+        }
+
+        img {
+            width: 16.1%;
+
+
+        }
+
+        .monitor {
+            background-color: blue;
+        }
+
+        .table {
+            /* background-image: url(./Images/table.jpg); */
+
+        }
+
+        .students div {
+            display: inline-flex;
+            font-weight: bolder;
+            flex-direction: column;
+            text-align: center;
+            width: 150px;
+
+        }
+
+        .students div img {
+            width: inherit;
+        }
+    </style>
+    <script>
+        function shout(name) {
+
+
+            alert(name)
+
+
+            // alert("Chiku")
+            // alert("dev")
+            // alert("Vedant")
+            // alert("Tarun")
+            // alert("Aarav")
+            // alert("Adithya")
+            // alert("Keshav")
+            // alert("Varad")
+            // alert("Krishna")
+
+
+        }
+        function addStudent() {
+            let parentElement = document.querySelector(".students")
+            // parentElement.add
+            alert(parentElement)
+        }
+        function createStudentwithName(name, imgSrc) {
+            // debugger
+            let parentElement = document.querySelector(".students")
+            let student = document.createElement('div')
+            student.textContent = name
+            let img = document.createElement('img')
+            img.src = imgSrc
+
+
+
+            student.appendChild(img)
+            parentElement.appendChild(student)
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="tablespace">
+        <img src="./Images/table2.png" alt="">
+
+    </div>
+    <audio src="audio/my voice.wma" controls></audio>
+    <div class="students">
+        <!-- <div>
+            <img src="Images/user2.jpg" alt="" onclick="shout('dev')">
+            dev
+        </div>
+        <img src="Images/user2.jpg" alt="" onclick="shout('Vedant')">
+        <img src="Images/user2.jpg" alt="" onclick="shout('Chiku')">
+        <img src="Images/user2.jpg" alt="" onclick="shout('Tarun')">i
+        <img src="Images/user2.jpg" alt="" onclick="shout('Aarav')">
+        <img src="Images/user2.jpg" alt="" onclick="shout('Adithya')">
+        <img src="Images/user2.jpg" alt="" onclick="shout('Keshav')">
+        <img src="Images/user2.jpg" alt="" onclick="shout('Varad')">
+        <img src="Images/user2.jpg" alt="" onclick="shout('Krishna')">
+ -->
+    </div>
+    <script>
+        var name0 = 'dev'
+        var name = 'aarav'
+        var name1 = 'siddhant'
+        var name2 = 'tarun'
+        var name3 = 'vedant'
+
+        // createStudentwithName(name0)
+        // createStudentwithName(name)
+        // createStudentwithName(name1)
+        // createStudentwithName(name2)
+        // createStudentwithName(name3)
+        // createStudentwithName()
+        // createStudentwithName()
+        // createStudentwithName()
+        // createStudentwithName()
+
+        var imgSrc = "Images/boy4.png"
+        var imgSrc1 = "Images/boy..png"
+        var imgSrc2 = "Images/boy2.png"
+        var imgSrc3 = "Images/boy3.png"
+        var imgSrc4 = "Images/user2.jpg"
+
+
+        createStudentwithName(name0, imgSrc)
+        createStudentwithName(name, imgSrc1)
+        createStudentwithName(name1, imgSrc2)
+        createStudentwithName(name2, imgSrc3)
+        createStudentwithName(name3, imgSrc4)
+
+
+
+    </script>
+</body>
+
+</html>
