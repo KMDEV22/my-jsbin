@@ -55,7 +55,6 @@
 
         }
         function createStudentwithName(studObj) {
-            // debugger
             let parentElement = document.querySelector(".students")
             let student = document.createElement('div')
             student.textContent = studObj.name
@@ -79,7 +78,6 @@
 
     </div>
     <audio src="audio/My Voice.mp3" controls>
-    debugger
     </audio>
     <div class="students">
     </div>
@@ -114,7 +112,7 @@
             stud4Object,
             stud5Object
         ]
-        for(let i=0;i<=5;i++){
+        for(let i=0;i<=4;i++){
             // debugger
             createStudentwithName(allStudents[i])
             
