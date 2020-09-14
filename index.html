@@ -29,11 +29,6 @@
             background-color: blue;
         }
 
-        .table {
-            /* background-image: url(./Images/table.jpg); */
-
-        }
-
         .students div {
             display: inline-flex;
             font-weight: bolder;
@@ -53,36 +48,24 @@
 
             alert(name)
 
-
-            // alert("Chiku")
-            // alert("dev")
-            // alert("Vedant")
-            // alert("Tarun")
-            // alert("Aarav")
-            // alert("Adithya")
-            // alert("Keshav")
-            // alert("Varad")
-            // alert("Krishna")
-
+        }
+        function addStudent(student, img, parentElement) {
+            student.appendChild(img)
+            parentElement.appendChild(student)
 
         }
-        function addStudent() {
-            let parentElement = document.querySelector(".students")
-            // parentElement.add
-            alert(parentElement)
-        }
-        function createStudentwithName(name, imgSrc) {
+        function createStudentwithName(studObj) {
             // debugger
             let parentElement = document.querySelector(".students")
             let student = document.createElement('div')
-            student.textContent = name
+            student.textContent = studObj.name
             let img = document.createElement('img')
-            img.src = imgSrc
+            img.src = studObj.imgSrc
 
 
 
-            student.appendChild(img)
-            parentElement.appendChild(student)
+            addStudent(student, img, parentElement)
+
 
 
 
@@ -95,51 +78,48 @@
         <img src="./Images/table2.png" alt="">
 
     </div>
-    <audio src="audio/my voice.wma" controls></audio>
+    <audio src="audio/My Voice.mp3" controls>
+    debugger
+    </audio>
     <div class="students">
-        <!-- <div>
-            <img src="Images/user2.jpg" alt="" onclick="shout('dev')">
-            dev
-        </div>
-        <img src="Images/user2.jpg" alt="" onclick="shout('Vedant')">
-        <img src="Images/user2.jpg" alt="" onclick="shout('Chiku')">
-        <img src="Images/user2.jpg" alt="" onclick="shout('Tarun')">i
-        <img src="Images/user2.jpg" alt="" onclick="shout('Aarav')">
-        <img src="Images/user2.jpg" alt="" onclick="shout('Adithya')">
-        <img src="Images/user2.jpg" alt="" onclick="shout('Keshav')">
-        <img src="Images/user2.jpg" alt="" onclick="shout('Varad')">
-        <img src="Images/user2.jpg" alt="" onclick="shout('Krishna')">
- -->
     </div>
     <script>
-        var name0 = 'dev'
-        var name = 'aarav'
-        var name1 = 'siddhant'
-        var name2 = 'tarun'
-        var name3 = 'vedant'
 
-        // createStudentwithName(name0)
-        // createStudentwithName(name)
-        // createStudentwithName(name1)
-        // createStudentwithName(name2)
-        // createStudentwithName(name3)
-        // createStudentwithName()
-        // createStudentwithName()
-        // createStudentwithName()
-        // createStudentwithName()
+        var stud1Object = {
+            name: "Vedant",
+            imgSrc: "Images/people.1.png"
+        }
+        var stud2Object = {
+            name: "Dev",
+            imgSrc: "Images/dev.22.png"
+        }
+        var stud3Object = {
+            name: "Siddhant",
+            imgSrc: "Images/siddhant01.png"
+        }
+        var stud4Object = {
+            name: "tarun",
+            imgSrc: "Images/boy3.png"
+        }
+        var stud5Object = {
+            name: "vedant",
+            imgSrc: "Images/user2.jpg"
+        }
 
-        var imgSrc = "Images/boy4.png"
-        var imgSrc1 = "Images/boy..png"
-        var imgSrc2 = "Images/boy2.png"
-        var imgSrc3 = "Images/boy3.png"
-        var imgSrc4 = "Images/user2.jpg"
 
+        var allStudents = [
+            stud1Object,
+            stud2Object,
+            stud3Object,
+            stud4Object,
+            stud5Object
+        ]
+        for(let i=0;i<=5;i++){
+            // debugger
+            createStudentwithName(allStudents[i])
+            
+        }
 
-        createStudentwithName(name0, imgSrc)
-        createStudentwithName(name, imgSrc1)
-        createStudentwithName(name1, imgSrc2)
-        createStudentwithName(name2, imgSrc3)
-        createStudentwithName(name3, imgSrc4)
 
 
 
